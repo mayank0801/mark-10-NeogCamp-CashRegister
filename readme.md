@@ -1,4 +1,4 @@
-# Mark-10 : Cash register using Vanilla JavaScript
+# Cash register using Vanilla JavaScript
 
 ## About: 
 - Application is created for calculating the change (left amount) with context to bill amount and given cash.   
