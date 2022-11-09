@@ -24,11 +24,13 @@ border-radius: 0.2rem;
 .table-content{
     margin-top: 5rem;
 }
+
 table {
     width: 50%;
     font-size: large;
     text-align: center;
     margin: auto;
+    display: none;
 }
 .no.of.notes{
     border: 2px solid black;

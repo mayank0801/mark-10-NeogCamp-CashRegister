@@ -4,35 +4,37 @@ const nextBtn=document.querySelector("#btn-next");
 const cashGiven=document.querySelector("#cash-Given");
 const btnCheck=document.querySelector("#btn-check");
 const Msg=document.querySelector("#Msg");
-CashBox= document.querySelector('#CashBox');
+const CashBox= document.querySelector('#CashBox');
 const numberOfNotes=document.getElementsByClassName("no.of.notes")
+const table=document.querySelector('table');
 
 
 var denominataion=[2000,500,100,20,10,5,1];
 
 
 function changeCalc(cash){
-    CashBox.innerHTML=`<h2>Cash to be returned :${cash}</h2>`;
+    console.log("clicked change calc");
+    Msg.innerHTML=`<h2>Cash to be returned :${cash}</h2>`;
     for(let i=0;i<denominataion.length;i++){
         var ans=Math.trunc(cash/denominataion[i]);
         cash%=denominataion[i];
         numberOfNotes[i].innerText=ans;
-        
-       
     }
+    
 }
 
 function errorMessage(msg){
-    Msg.style.display="block";
-
+    // Msg.style.display="block";
     Msg.innerText=msg;
 }
-function hideMsg(){
-   Msg.style.display="none";
-}
+// function hideMsg(){
+//    Msg.style.display="none";
+// }
 
 function check(){
-    hideMsg();
+    console.log("clicked");
+    // hideMsg();
+    table.style.display="none";
     if(billAmount.value===""||cashGiven.value==="")
     {
         errorMessage("All input Field Required");
@@ -49,8 +51,8 @@ function check(){
     }
     else if(Number(cashGiven.value)>=Number(billAmount.value)){
         const cashToReturn=cashGiven.value-billAmount.value;
-        changeCalc(cashToReturn);
-        
+        table.style.display="block";        
+        changeCalc(cashToReturn);      
     }
 
 }
