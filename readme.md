@@ -1,4 +1,4 @@
-# Mark-10 : Cash register using Vanilla JavaScript
+# Cash register using Vanilla JavaScript
 
 ## About: 
 - Application is created for calculating the change (left amount) with context to bill amount and given cash.   
@@ -13,4 +13,7 @@
 2. CSS
 3. JavaScript
 4. Netlify(for deployment)
+
+<img src="images/image.png" height="30%" width="50%">
+
 
